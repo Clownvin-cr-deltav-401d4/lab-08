@@ -13,7 +13,7 @@ router.put('/api/v1/products/:id', putProducts);
 router.delete('/api/v1/products/:id', deleteProducts);
 
 function getProducts(request,response,next) {
-  request = request;
+  request.lint = null;
   // expects an array of objects back
   products.get()
     .then( data => {
