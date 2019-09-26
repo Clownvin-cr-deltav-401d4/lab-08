@@ -13,7 +13,7 @@ router.put('/api/v1/categories/:id', putCategories);
 router.delete('/api/v1/categories/:id', deleteCategories);
 
 function getCategories(request,response,next) {
-  request = request;
+  request.lint = null;
   // expects an array of object to be returned from the model
   categories.get()
     .then( data => {
@@ -38,9 +38,7 @@ function getCategory(request,response,next) {
 function postCategories(request,response,next) {
   // expects the record that was just added to the database
   categories.post(request.body)
-    .then( result => {
-      response.status(200).json(result);
-     })
+    .then( result => response.status(200).json(result))
     .catch( next );
 }
 

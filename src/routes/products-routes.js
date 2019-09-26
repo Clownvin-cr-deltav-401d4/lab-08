@@ -45,7 +45,7 @@ function putProducts(request,response,next) {
   // expects the record that was just updated in the database
   products.put(request.params.id, request.body)
     .then( result => {
-      response.status(200).json(result)
+      response.status(200).json(result);
     })
     .catch( next );
 }

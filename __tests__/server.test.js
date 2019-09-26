@@ -144,6 +144,7 @@ describe('/api/v1/products', () => {
           .delete(`/api/v1/products/${record._id}`)
           .expect(200)
           .then(response => {
+            response.lint = null;
             //console.log(response.body);
             return mockedGoose
               .get('/api/v1/products')
