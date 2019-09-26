@@ -9,8 +9,7 @@ const morgan = require('morgan');
 const errorHandler = require( './middleware/error.js');
 const notFound = require( './middleware/404.js' );
 
-const productsRouter = require('./routes/products-routes');
-const categoriesRouter = require('./routes/categories-routes');
+const v1Router = require('./routes/v1router');
 
 // Prepare the express app
 const app = express();
@@ -23,8 +22,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 // Routes
-app.use(productsRouter);
-app.use(categoriesRouter);
+//app.use('/api/v1', productsRouter);
+//app.use('/api/v1', categoriesRouter);
+app.use('/api/v1', v1Router);
 
 // Catchalls
 app.use(notFound);
