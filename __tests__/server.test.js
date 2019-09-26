@@ -85,7 +85,7 @@ describe('/api/v1/categories', () => {
 });
 
 describe('/api/v1/products', () => {
-  it('🍕 Can create things using POST /api/v1/products 🍕', () => {
+  it('🌯 Can create things using POST /api/v1/products 🌯', () => {
     return mockedGoose
       .post('/api/v1/products')
       .send({name: 'Test Product', description: 'A test product...', price: 30, stock: 10, available: true})
@@ -94,14 +94,14 @@ describe('/api/v1/products', () => {
         expect(result.body).toHaveProperty('_id');
       });
   });
-  it('🍜 Can get all the categories using GET /api/v1/products 🍜', () => {
+  it('🍙 Can get all the categories using GET /api/v1/products 🍙', () => {
     return mockedGoose
       .get('/api/v1/products')
       .then(response => {
         expect(response.body.count).toBe(1);
       });
   });
-  it(`🍩 Can get a single record using GET /api/v1/products/:id 🍩`, () => {
+  it(`🥗 Can get a single record using GET /api/v1/products/:id 🥗`, () => {
     return mockedGoose
       .get('/api/v1/products')
       .expect(200)
@@ -116,7 +116,7 @@ describe('/api/v1/products', () => {
           });
       });
   });
-  it(`🥞 Can update a single record using PUT /api/v1/products/:id 🥞`, () => {
+  it(`🍨 Can update a single record using PUT /api/v1/products/:id 🍨`, () => {
     return mockedGoose
       .get('/api/v1/products')
       .expect(200)
@@ -132,7 +132,7 @@ describe('/api/v1/products', () => {
           });
       });
   });
-  it(`🥓 Can delete a single record using DELETE /api/v1/products/:id 🥓`, () => {
+  it(`🍫 Can delete a single record using DELETE /api/v1/products/:id 🍫`, () => {
     return mockedGoose
       .get('/api/v1/products')
       .expect(200)
