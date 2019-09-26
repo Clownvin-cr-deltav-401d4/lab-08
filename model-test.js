@@ -9,8 +9,8 @@ function testModel(Model, getDocument, getDocumentUpdate, type) {
       document = getDocument();
     });
 
-    it('can create() a new document', async () => {
-      let record = await model.create(document);
+    it('can post() a new document', async () => {
+      let record = await model.post(document);
       
       expect(record).toHaveProperty('_id');
       for (const property in document) {
@@ -19,7 +19,7 @@ function testModel(Model, getDocument, getDocumentUpdate, type) {
     });
   
     it('can get() a document', async () => {
-      let record = await model.create(document);
+      let record = await model.post(document);
       let gotten = await model.get(record._id);
 
       expect(gotten).toHaveProperty('_id');
@@ -34,9 +34,9 @@ function testModel(Model, getDocument, getDocumentUpdate, type) {
     });
   
     it('can update() a document', async () => {
-      let record = await model.create(document);
+      let record = await model.post(document);
       let update = getDocumentUpdate();
-      let updated = await model.update(record._id, update);
+      let updated = await model.put(record._id, update);
 
       for (const property in update) {
         expect(updated[property]).toBe(update[property]);
@@ -44,7 +44,7 @@ function testModel(Model, getDocument, getDocumentUpdate, type) {
     });
   
     it('can delete() a document', async () => {
-      let record = await model.create(document);
+      let record = await model.post(document);
       expect(record).toBeTruthy();
   
       await model.delete(record._id);
