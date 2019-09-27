@@ -1,6 +1,6 @@
 # LAB - 8
 
-## Routes and Supergoose tests
+## Routes and Supergoose tests - JSDoc and Swagger
 
 ### Author: Calvin Hall
 
