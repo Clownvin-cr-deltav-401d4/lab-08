@@ -8,7 +8,7 @@
     "test-watch": "jest --watchAll --verbose",
     "start": "node index.js",
     "lint": "eslint '**/*.js'",
-    "jsdoc": "jsdoc './src/server.js' './src/routes/v1router.js' './src/models/mongo.js' './src/middleware/404.js' './src/middleware/error.js' './src/middleware/model-finder.js'"
+    "jsdoc": "jsdoc -d './doc' './src/server.js' './src/routes/v1router.js' './src/models/mongo.js' './src/middleware/404.js' './src/middleware/error.js' './src/middleware/model-finder.js'"
   },
   "jest": {
     "testEnvironment": "node"
