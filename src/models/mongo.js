@@ -14,7 +14,7 @@ class Model {
   /**
    * Retrieves one or more records
    * @param _id {string} optional mongo record id
-   * @returns {count:#,results:[{*}]} | {*}
+   * @returns {*}
    */
   get(_id) {
     if (_id) {
