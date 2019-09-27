@@ -1,4 +1,4 @@
-const Categories = require('../../models-modular/categories/categories.js');
+const Categories = require('../../src/models/categories/categories');
 
 const testModel = require('../../model-test');
 
