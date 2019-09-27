@@ -1,4 +1,4 @@
-# LAB - 8
+# LAB - 8-9
 
 ## Routes and Supergoose tests - JSDoc and Swagger
 
@@ -9,6 +9,8 @@
 * [travis](https://www.travis-ci.com/Clownvin-cr-deltav-401d4/lab-08)
 
 ## Modules
+### v1router
+Exports a router which handles all routes, assuming that the appendModel middleware has run and attached a model to use to each request. All the APIs below use this router, but support their own model which works separately from eachother.
 ### categories-routes
 Exports an express Routes object, with routes for:
 * GET /api/v1/categories - Returns all categories
