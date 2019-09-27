@@ -33,3 +33,6 @@ Exports an express Routes object, with routes for:
   
 #### Tests
 * `npm test`
+
+#### UML/Diagrams
+https://i.imgur.com/B57SwNe.jpg
